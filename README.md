@@ -1,2 +1,2 @@
 # ether-mining-pool
-Creating an application that will allow me to pool together the power of multiple computers.
+Creating an application that will allow me to pool together the computing power of mulitlpe computer.

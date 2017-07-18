@@ -1,11 +1,12 @@
 package main
 
 import (
-    "net/http"
+     "net/http"
 )
 
 func    main () {
     http.Handle("/", http.FileServer(http.Dir("../www")))
     http.Handle("/miner", http.FileServer(http.Dir("../www/miner")))
-    http.ListenAndServeTSL(":8080", "cert.pem", "key.pem", nil)
+    http.Handle("/miner", http.FileServer(http.Dir("../www/login/login.html")))
+    http.ListenAndServe(":8080", nil)
 }

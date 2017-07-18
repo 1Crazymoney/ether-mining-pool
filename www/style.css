@@ -1,0 +1,29 @@
+.body {
+    padding: 0;
+    margin: 0;
+}
+
+.login {
+    text-align: right;
+    margin-top:-90;
+    padding-bottom:30;
+}
+
+.image {
+    margin-left:1485;
+    margin-top:-550;
+    height: 230px;
+    width: 500px;
+}
+
+.image2{
+    margin-top:-220;
+    margin-left:40;
+    height: 230px;
+    width: 500px;
+}
+
+.signup {
+    margin-top:-30;
+    text-align:right;
+}

@@ -9,7 +9,6 @@ import (
 	"strconv"
 	"strings"
     "net/http"
-
 )
 
 const (
@@ -81,11 +80,11 @@ func isTransportOver(data string) (over bool) {
 
 func    main () {
 
-	port := 9091
-	SocketServer(port)
+    go func() {
+	    port := 9091
+	    SocketServer(port)			
+	}()
 
     http.Handle("/", http.FileServer(http.Dir("../www")))
-    http.Handle("/miner", http.FileServer(http.Dir("../miner")))
-    http.Handle("/signup", http.FileServer(http.Dir("../www/signup")))
-    http.ListenAndServe(":8080", nil)
+    http.ListenAndServe(":8080", nil);
 }

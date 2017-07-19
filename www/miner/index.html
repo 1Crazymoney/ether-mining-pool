@@ -9,33 +9,31 @@
         <dev class="signin">
             <p align="right"><a href="settings">-settings</a></p>
         </dev>
+      
         <h2>Miners Address: 0x58801ebec6685d0d5461a30999fa5df91549a59e</h2>
         <h1> Stats: OFFLINE </h1>
-       <div class="container">
-    <div>
-      <canvas id="myChart" width="2800" height="700"></canvas>
-      <script> var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: ['7/1', '7/2', '7/3', '7/4', '7/5', '7/6', '7/7', '7/8', '7/9', '7/10', '7/11', '7/12'],
-            datasets: [{
-              label: 'Hashing Rate - ETH',
-              data: [3, 12, 3, 17, 6, 3, 7, 10, 12, 14, 5, 17],
-              borderColor: "#3e95cd",
-              fill: false
-            },  {
-              label: 'Hashing Rate - BTC',
-              data: [2, 9, 5, 5, 2, 3, 10, 8, 9, 12, 7, 9, 10],
-              borderColor: "#8e5ea2",
-              fill: false
-            } ]
-          }
+        <canvas id="myChart" width="2800" height="700"></canvas>
+        <script>
+           var ctx = document.getElementById('myChart').getContext('2d');
+           var myChart = new Chart(ctx, {
+           type: 'line',
+           data: {
+             labels: ['7/1', '7/2', '7/3', '7/4', '7/5', '7/6', '7/7', '7/8', '7/9', '7/10', '7/11', '7/12'],
+             datasets: [{
+               label: 'Hashing Rate - ETH',
+               data: [3, 12, 3, 17, 6, 3, 7, 10, 12, 14, 5, 17],
+               borderColor: "#3e95cd",
+               fill: false
+             },  {
+               label: 'Hashing Rate - BTC',
+               data: [2, 9, 5, 5, 2, 3, 10, 8, 9, 12, 7, 9, 10],
+               borderColor: "#8e5ea2",
+               fill: false
+             } ]
+           }
         });
-    </script>
-      </div>
-    </div>
         </script>
+
         <p>Hashing Rate = 124.65 MH/S</p>
         <p>ETH Collected: 2.4</p>
         <p>ETH Payout rate: 0.03</p>
@@ -46,7 +44,6 @@
         <p>4.) 27.65 MH/S ACTIVE -BTC</p>
 
     <h1>Pay Outs</h1>
-    <div>
       <canvas id="other" width="2800" height="700"></canvas>
       <script> var ctx = document.getElementById('other').getContext('2d');
         var myChart = new Chart(ctx, {
@@ -61,7 +58,6 @@
           }
         });
     </script>
-      </div>
-
     </body>
+
 </html>

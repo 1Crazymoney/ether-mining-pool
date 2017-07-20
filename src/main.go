@@ -9,6 +9,7 @@ import (
 	"strconv"
 	"strings"
     "net/http"
+	"fmt"
 )
 
 const (
@@ -24,6 +25,7 @@ func SocketServer(port int) {
 		log.Fatalf("Socket listen port %d failed,%s", port, err)
 		os.Exit(1)
 	}
+
 	log.Printf("Begin listen port: %d", port)
 
 	for {
@@ -85,6 +87,17 @@ func    main () {
 	    SocketServer(port)			
 	}()
 
+	conn, _ := net.Dial("tcp", "127.0.0.1:9092")
+	for 
+	{ 
+    	reader := bufio.NewReader(os.Stdin)
+    	fmt.Print("Text to send: ")
+    	text, _ := reader.ReadString('\n')
+    	fmt.Fprintf(conn, text + "\n")
+    	message, _ := bufio.NewReader(conn).ReadString('\n')
+    	fmt.Print("Message from server: "+message)
+  	}
+
     http.Handle("/", http.FileServer(http.Dir("../www")))
-    http.ListenAndServe(":8080", nil);
+    http.ListenAndServeTLS(":8080", "cert.pem", "key.pem", nil);
 }

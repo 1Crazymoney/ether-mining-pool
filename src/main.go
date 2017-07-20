@@ -69,7 +69,6 @@ ILOOP:
 		}
 
 	}
-	w.Write([]byte(Message))
 	w.Flush()
 	log.Printf("Send: %s", Message)
 
@@ -83,11 +82,11 @@ func isTransportOver(data string) (over bool) {
 func    main () {
 
     go func() {
-	    port := 9091
+	    port := 9095
 	    SocketServer(port)			
 	}()
 
-	conn, _ := net.Dial("tcp", "127.0.0.1:9092")
+	conn, _ := net.Dial("tcp", "127.0.0.1:9093")
 	for 
 	{ 
     	reader := bufio.NewReader(os.Stdin)
@@ -95,7 +94,7 @@ func    main () {
     	text, _ := reader.ReadString('\n')
     	fmt.Fprintf(conn, text + "\n")
     	message, _ := bufio.NewReader(conn).ReadString('\n')
-    	fmt.Print("Message from server: "+message)
+    	fmt.Print("Message from server: "+ message)
   	}
 
     http.Handle("/", http.FileServer(http.Dir("../www")))
